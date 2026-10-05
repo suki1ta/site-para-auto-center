@@ -1,0 +1,26 @@
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependências e build (caso o projeto evolua)
+node_modules/
+dist/
+build/
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Credenciais e variáveis de ambiente (nunca enviar ao GitHub)
+.env
+.env.*
+*.key
+*.pem
+secrets.*

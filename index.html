@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Center Veloz | Relate o problema do seu veículo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. CABEÇALHO -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="#inicio" class="logo">🔧 AUTO CENTER <span>VELOZ</span></a>
+      <nav class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#relatar">Relatar Problema</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#acompanhar">Acompanhar Serviço</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 2. TELA PRINCIPAL -->
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <div class="hero-texto">
+          <h1>Está com algum problema no <span>seu veículo?</span></h1>
+          <p>Conte para nossa equipe o que está acontecendo. Assim podemos entender melhor sua necessidade e orientar você sobre o próximo passo.</p>
+          <a href="#relatar" class="btn">Relatar um problema</a>
+        </div>
+        <!-- Espaço reservado para imagem de um carro na oficina -->
+        <div class="hero-imagem" aria-hidden="true">
+          <span>🚗</span>
+          <small>🔧 Atendimento na oficina</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. RELATE SEU PROBLEMA (seção principal) -->
+    <section class="secao secao-escura" id="relatar">
+      <div class="container">
+        <h2>Conte o que está acontecendo com seu <span>veículo</span></h2>
+        <p class="subtitulo">Preencha as informações abaixo para que nossa equipe possa entender melhor a situação do seu veículo.</p>
+
+        <!-- Formulário visual (não envia dados) -->
+        <form class="formulario">
+
+          <!-- Dados do cliente -->
+          <fieldset>
+            <legend>👤 Dados do cliente</legend>
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" placeholder="Seu nome completo">
+
+            <div class="duas-colunas">
+              <div>
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+              </div>
+              <div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="seu@email.com">
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Dados do veículo -->
+          <fieldset>
+            <legend>🚗 Dados do veículo</legend>
+            <div class="duas-colunas">
+              <div>
+                <label for="marca">Marca</label>
+                <input type="text" id="marca" placeholder="Ex.: Honda">
+              </div>
+              <div>
+                <label for="modelo">Modelo</label>
+                <input type="text" id="modelo" placeholder="Ex.: Civic">
+              </div>
+              <div>
+                <label for="ano">Ano</label>
+                <input type="text" id="ano" placeholder="Ex.: 2020">
+              </div>
+              <div>
+                <label for="placa">Placa</label>
+                <input type="text" id="placa" placeholder="ABC-1234">
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Problema apresentado -->
+          <fieldset>
+            <legend>⚠️ Problema apresentado</legend>
+
+            <label for="problema">Qual problema você está enfrentando?</label>
+            <select id="problema">
+              <option>Barulho estranho</option>
+              <option>Problema no motor</option>
+              <option>Problema nos freios</option>
+              <option>Problema na suspensão</option>
+              <option>Problema elétrico</option>
+              <option>Luz de alerta acesa</option>
+              <option>Carro não liga</option>
+              <option>Outro problema</option>
+            </select>
+
+            <label for="quando">Quando o problema acontece?</label>
+            <select id="quando">
+              <option>Ao ligar o carro</option>
+              <option>Durante a direção</option>
+              <option>Ao frear</option>
+              <option>Ao acelerar</option>
+              <option>Em ruas esburacadas</option>
+              <option>Ocorre constantemente</option>
+              <option>Outro</option>
+            </select>
+
+            <!-- Campo principal: o cliente explica com as próprias palavras -->
+            <label for="descricao" class="destaque">✍️ Descreva o problema com mais detalhes</label>
+            <textarea id="descricao" rows="8" placeholder="Exemplo: Meu carro começou a fazer um barulho quando passo por ruas esburacadas..."></textarea>
+
+            <label for="tempo">Há quanto tempo o problema acontece?</label>
+            <input type="text" id="tempo" placeholder="Ex.: há 2 semanas">
+
+            <p class="rotulo">Você percebeu alguma mudança no veículo recentemente?</p>
+            <div class="opcoes">
+              <input type="radio" name="mudanca" id="m-sim">
+              <label for="m-sim">Sim</label>
+              <input type="radio" name="mudanca" id="m-nao">
+              <label for="m-nao">Não</label>
+            </div>
+          </fieldset>
+
+          <button type="button" class="btn btn-grande">ENVIAR RELATO</button>
+        </form>
+
+        <!-- 4. AVISO APÓS O FORMULÁRIO -->
+        <div class="depois">
+          <h3>O que acontece depois?</h3>
+          <div class="grade-etapas">
+            <div class="etapa"><strong>1</strong><p>Recebemos seu relato.</p></div>
+            <div class="etapa"><strong>2</strong><p>Nossa equipe analisa as informações.</p></div>
+            <div class="etapa"><strong>3</strong><p>Entramos em contato para orientar você.</p></div>
+            <div class="etapa"><strong>4</strong><p>O veículo pode ser encaminhado para diagnóstico, caso necessário.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ACOMPANHE SEU VEÍCULO -->
+    <section class="secao" id="acompanhar">
+      <div class="container">
+        <h2>Acompanhe o serviço do seu <span>veículo</span></h2>
+
+        <div class="painel">
+          <div class="painel-info">
+            <p><strong>Veículo:</strong> Honda Civic 2020</p>
+            <p><strong>Placa:</strong> ABC-1234</p>
+          </div>
+
+          <!-- Barra de progresso feita só com CSS -->
+          <div class="barra"><div class="barra-preenchimento"></div></div>
+          <p class="barra-texto">Etapa 3 de 5 — Aguardando aprovação</p>
+
+          <ul class="etapas">
+            <li class="feito"><span>✓</span> Veículo recebido</li>
+            <li class="feito"><span>✓</span> Problema identificado</li>
+            <li class="atual"><span>●</span> Aguardando aprovação</li>
+            <li><span>○</span> Serviço em execução</li>
+            <li><span>○</span> Veículo pronto</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SERVIÇOS -->
+    <section class="secao secao-escura" id="servicos">
+      <div class="container">
+        <h2>Nossos <span>Serviços</span></h2>
+        <p class="subtitulo">Manutenção preventiva e corretiva para o seu veículo.</p>
+
+        <div class="grade-cards">
+          <article class="card"><div class="icone">📋</div><h3>Revisão preventiva</h3><p>Checagem completa para evitar problemas antes que aconteçam.</p></article>
+          <article class="card"><div class="icone">🛢️</div><h3>Troca de óleo</h3><p>Óleo e filtros de qualidade para o motor funcionar bem.</p></article>
+          <article class="card"><div class="icone">🛑</div><h3>Sistema de freios</h3><p>Pastilhas, discos e fluido para frear com segurança.</p></article>
+          <article class="card"><div class="icone">🚙</div><h3>Suspensão</h3><p>Amortecedores e molas revisados para mais conforto.</p></article>
+          <article class="card"><div class="icone">💻</div><h3>Diagnóstico automotivo</h3><p>Testes para encontrar a causa real do defeito.</p></article>
+          <article class="card"><div class="icone">⚙️</div><h3>Troca de peças</h3><p>Peças confiáveis, com aprovação antes de qualquer troca.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. POR QUE ESCOLHER -->
+    <section class="secao" id="porque">
+      <div class="container">
+        <h2>Por que escolher a <span>Auto Center Veloz?</span></h2>
+        <p class="subtitulo">Transparência e confiança em cada serviço.</p>
+
+        <div class="grade-numeros">
+          <div class="numero"><strong>5</strong><span>elevadores automotivos</span></div>
+          <div class="numero"><strong>6</strong><span>mecânicos qualificados</span></div>
+          <div class="numero"><strong>✔</strong><span>Atendimento transparente</span></div>
+          <div class="numero"><strong>📍</strong><span>Acompanhamento do serviço</span></div>
+          <div class="numero"><strong>💬</strong><span>Comunicação com o cliente</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CONTATO -->
+    <section class="secao secao-escura" id="contato">
+      <div class="container">
+        <h2>Ainda precisa de <span>ajuda?</span></h2>
+
+        <div class="contato-info">
+          <p>📞 <strong>Telefone:</strong> (19) 3000-0000</p>
+          <p>💬 <strong>WhatsApp:</strong> (19) 90000-0000</p>
+          <p>📍 <strong>Endereço:</strong> Rua das Oficinas, 123 - Centro</p>
+          <p>🕗 <strong>Horário:</strong> Seg a Sex, 8h às 18h | Sáb, 8h às 12h</p>
+        </div>
+
+        <div class="centro">
+          <a href="#contato" class="btn btn-grande">Falar com a Auto Center Veloz</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 9. RODAPÉ -->
+  <footer class="footer">
+    <p>© 2026 Auto Center Veloz - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

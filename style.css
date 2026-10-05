@@ -1,0 +1,290 @@
+/* ========== CONFIGURAÇÕES GERAIS ========== */
+/* Cores guardadas em variáveis para facilitar mudanças */
+:root {
+  --preto: #0d0d0d;
+  --cinza-escuro: #1c1c1e;
+  --cinza-medio: #2a2a2d;
+  --cinza-texto: #b5b5b8;
+  --vermelho: #e10600;
+  --vermelho-escuro: #b00500;
+  --branco: #f5f5f5;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;     /* rolagem suave ao clicar no menu */
+  scroll-padding-top: 90px;    /* evita que o cabeçalho cubra os títulos */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--preto);
+  color: var(--branco);
+  line-height: 1.6;
+  font-size: 1.05rem;          /* textos grandes e fáceis de ler */
+}
+
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+a { text-decoration: none; }
+.centro { text-align: center; margin-top: 30px; }
+
+/* ========== BOTÕES ========== */
+.btn {
+  display: inline-block;
+  background-color: var(--vermelho);
+  color: var(--branco);
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(225, 6, 0, 0.3);
+  transition: background-color 0.2s;
+}
+.btn:hover { background-color: var(--vermelho-escuro); }
+.btn-grande { padding: 16px 40px; font-size: 1.15rem; }
+
+/* ========== 1. CABEÇALHO ========== */
+.header {
+  background-color: var(--cinza-escuro);
+  border-bottom: 3px solid var(--vermelho);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+.logo { color: var(--branco); font-size: 1.4rem; font-weight: bold; letter-spacing: 1px; }
+.logo span, h1 span, h2 span { color: var(--vermelho); }
+.menu a { color: var(--cinza-texto); margin-left: 20px; font-size: 0.95rem; transition: color 0.2s; }
+.menu a:hover { color: var(--branco); }
+
+/* ========== 2. TELA PRINCIPAL ========== */
+.hero {
+  background:
+    radial-gradient(circle at 80% 50%, rgba(225, 6, 0, 0.25), transparent 50%),
+    linear-gradient(135deg, var(--preto), var(--cinza-escuro));
+  padding: 90px 0;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.hero-texto { max-width: 560px; }
+.hero-texto h1 { font-size: 2.8rem; line-height: 1.15; margin-bottom: 15px; }
+.hero-texto p { color: var(--cinza-texto); font-size: 1.2rem; margin-bottom: 30px; }
+
+/* Caixa que serve de espaço reservado para a imagem */
+.hero-imagem {
+  background-color: var(--cinza-medio);
+  border: 2px dashed #555;
+  border-radius: 12px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+.hero-imagem span { display: block; font-size: 8rem; line-height: 1.2; }
+.hero-imagem small { color: var(--cinza-texto); font-size: 1rem; }
+
+/* ========== SEÇÕES (estilo comum) ========== */
+.secao { padding: 70px 0; }
+.secao-escura { background-color: var(--cinza-escuro); }
+
+h2 { font-size: 2rem; text-align: center; margin-bottom: 10px; }
+.subtitulo { text-align: center; color: var(--cinza-texto); margin-bottom: 40px; }
+
+/* ========== 3. FORMULÁRIO DE RELATO ========== */
+.formulario {
+  background-color: var(--cinza-medio);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 12px;
+  border-top: 4px solid var(--vermelho);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Cada grupo de campos fica em uma caixa */
+.formulario fieldset {
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 10px 20px 20px;
+  margin-bottom: 22px;
+}
+.formulario legend { padding: 0 10px; font-weight: bold; font-size: 1.15rem; color: var(--vermelho); }
+
+.formulario label, .rotulo {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 1rem;
+  color: var(--branco);
+}
+
+.formulario input[type="text"],
+.formulario input[type="tel"],
+.formulario input[type="email"],
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--preto);
+  color: var(--branco);
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus { outline: none; border-color: var(--vermelho); }
+
+/* Campo de descrição em destaque */
+.formulario .destaque { color: var(--vermelho); font-weight: bold; font-size: 1.15rem; margin-top: 22px; }
+.formulario textarea { min-height: 180px; border: 2px solid var(--vermelho); }
+
+/* Campos lado a lado */
+.duas-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+
+/* Opções Sim/Não em formato de botões (radio escondido) */
+.opcoes { display: flex; gap: 10px; }
+.opcoes input { display: none; }
+.opcoes label {
+  margin: 0;
+  padding: 8px 26px;
+  background-color: var(--preto);
+  border: 1px solid #555;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.opcoes input:checked + label { background-color: var(--vermelho); border-color: var(--vermelho); font-weight: bold; }
+
+.formulario .btn-grande { width: 100%; }
+
+/* ========== 4. O QUE ACONTECE DEPOIS ========== */
+.depois { max-width: 800px; margin: 40px auto 0; }
+.depois h3 { text-align: center; margin-bottom: 20px; font-size: 1.4rem; }
+.grade-etapas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.etapa {
+  background-color: var(--cinza-medio);
+  padding: 20px 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+.etapa strong {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: var(--vermelho);
+  border-radius: 50%;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.etapa p { color: var(--cinza-texto); font-size: 0.95rem; }
+
+/* ========== 5. ACOMPANHAMENTO ========== */
+.painel {
+  background-color: var(--cinza-medio);
+  max-width: 650px;
+  margin: 30px auto 0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+.painel-info { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #444; }
+.barra { background-color: var(--preto); height: 14px; border-radius: 10px; overflow: hidden; }
+.barra-preenchimento { width: 55%; height: 100%; background-color: var(--vermelho); border-radius: 10px; } /* altere a largura para mudar o progresso */
+.barra-texto { color: var(--cinza-texto); font-size: 0.85rem; margin: 8px 0 20px; }
+.etapas { list-style: none; }
+.etapas li { padding: 8px 0; color: var(--cinza-texto); }
+.etapas span { display: inline-block; width: 24px; font-weight: bold; }
+.etapas .feito { color: #4cd964; }
+.etapas .atual { color: var(--vermelho); font-weight: bold; }
+
+/* ========== 6. SERVIÇOS ========== */
+.grade-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card {
+  background-color: var(--cinza-medio);
+  padding: 28px;
+  border-radius: 10px;
+  border-top: 3px solid var(--vermelho);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-5px); }
+.icone { font-size: 2.4rem; margin-bottom: 10px; }
+.card h3 { margin-bottom: 8px; }
+.card p { color: var(--cinza-texto); font-size: 0.95rem; }
+
+/* ========== 7. POR QUE ESCOLHER ========== */
+.grade-numeros { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
+.numero {
+  background-color: var(--cinza-medio);
+  text-align: center;
+  padding: 25px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+.numero strong { display: block; font-size: 2.6rem; color: var(--vermelho); line-height: 1.2; }
+.numero span { color: var(--cinza-texto); font-size: 0.95rem; }
+
+/* ========== 8. CONTATO ========== */
+.contato-info { max-width: 650px; margin: 30px auto 0; }
+.contato-info p {
+  background-color: var(--cinza-medio);
+  padding: 15px 18px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* ========== 9. RODAPÉ ========== */
+.footer {
+  background-color: var(--cinza-escuro);
+  border-top: 3px solid var(--vermelho);
+  text-align: center;
+  padding: 25px 10px;
+  color: var(--cinza-texto);
+  font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+/* Tablet (até 900px) */
+@media (max-width: 900px) {
+  .grade-cards { grid-template-columns: repeat(2, 1fr); }
+  .grade-etapas { grid-template-columns: repeat(2, 1fr); }
+  .grade-numeros { grid-template-columns: repeat(3, 1fr); }
+  .hero-texto h1 { font-size: 2.3rem; }
+  .hero-imagem span { font-size: 6rem; }
+}
+
+/* Celular (até 650px) */
+@media (max-width: 650px) {
+  .header-content { flex-direction: column; gap: 10px; }
+  .menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; }
+  .menu a { margin-left: 0; }
+
+  .hero { padding: 50px 0; }
+  .hero-content { flex-direction: column; text-align: center; }
+  .hero-texto h1 { font-size: 1.9rem; }
+  .hero-imagem { padding: 20px 30px; }
+
+  .grade-cards,
+  .grade-etapas,
+  .grade-numeros,
+  .duas-colunas { grid-template-columns: 1fr; }
+
+  .formulario { padding: 20px 15px; }
+  h2 { font-size: 1.6rem; }
+  .secao { padding: 50px 0; }
+}
