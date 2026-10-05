@@ -150,6 +150,6 @@ Distribuído sob a licença **MIT**. Consulte o arquivo [LICENSE](LICENSE) para 
 
 ## 👤 Autor
 
-**Seu Nome**
+**Gustavo Rodrigues Broch**
 Disciplina de Design Profissional — Prof. Sedenilso Antonio Machado
-GitHub: [@SEU-USUARIO](https://github.com/SEU-USUARIO)
+GitHub: [@Suki1ta](https://github.com/Suki1ta)
